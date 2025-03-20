@@ -7,4 +7,5 @@ Scripts are to be run in the following sequence:
 4. Layer profile visualization v2
 5. Layer profile visualization v3
 6. Metrics calculation
+7. GLM
 
