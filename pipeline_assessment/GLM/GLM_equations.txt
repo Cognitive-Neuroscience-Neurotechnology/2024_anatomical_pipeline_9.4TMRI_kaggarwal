@@ -1,0 +1,29 @@
+** GLM Equations: **
+
+A (Ground Truth) = shape(700,3) --> 700 rows (all responses) and 3 columns (3 layers)
+
+B (Pipeline Output) = shape(700,3) --> 700 rows (all responses) and 3 columns (3 layers)
+
+Let M be the transfer function for data fitting, then: 
+B = M.A --> write in component form ********
+
+To solve this equation, we consider: 
+Cost Function = (B - M.A)^2
+
+Taking derivateive of this, equating to 0 and solving for M, we get:
+M = (A_T . A)^-1 . (A_T . B)
+
+Now fitting data for column i of A with column i of B --> we get 3 Ms
+
+Then, fitting data for column i of A with column i+1 of A --> we get 3 M_As
+
+Then, fitting data for column i of B with column i+1 of B --> we get 3 M_Bs
+
+PLotting all these Ms into one figure for each lobe and whole brain
+
+
+Therefore, the equations for each layer are:
+
+B_superfical = M_superficial . A_superficial
+B_middle = M_middle . A_middle
+B_deep = M_deep . A_deep
